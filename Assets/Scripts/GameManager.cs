@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviourPun
         if (photonView.IsMine)
         {
             gameOverPanel.SetActive(true);
-            gameOverText.text = playerName + " ha sido eliminado";
+            gameOverText.text = playerName + " Moriste pipi";
         }
     }
 }

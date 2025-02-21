@@ -48,7 +48,7 @@ public class PlayerNameDisplay : MonoBehaviourPun
             if (nameText != null)
             {
                 nameText.text = "Jugador Local"; // Nombre fijo para pruebas
-                nameText.color = Color.green; // Cambiar el color para el jugador local
+                nameText.color = Color.blue; // Cambiar el color para el jugador local
                 Debug.Log("Texto asignado: " + nameText.text);
             }
             else
@@ -59,7 +59,7 @@ public class PlayerNameDisplay : MonoBehaviourPun
             if (healthText != null)
             {
                 healthText.text = $"Vida: {playerHealth.currentHealth}"; // Ahora playerHealth ya está asignado
-                healthText.color = Color.green;
+                healthText.color = Color.blue;
                 Debug.Log("Texto de vida asignado.");
                 
                 // Suscribirse al evento de cambio de vida
@@ -148,12 +148,12 @@ public class PlayerNameDisplay : MonoBehaviourPun
             // Actualizar el color según el umbral
             if (healthPercentage <= 30f) // Umbral de vida baja
             {
-                healthText.color = Color.red;
+                healthText.color = Color.magenta;
             }
             else
             {
                 // Interpolar color entre rojo y verde basado en el porcentaje de vida
-                healthText.color = Color.Lerp(Color.red, Color.green, healthPercentage / 100f);
+                healthText.color = Color.Lerp(Color.magenta, Color.blue, healthPercentage / 100f);
             }
         }
     }
