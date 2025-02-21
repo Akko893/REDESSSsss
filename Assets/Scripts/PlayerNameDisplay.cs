@@ -47,7 +47,7 @@ public class PlayerNameDisplay : MonoBehaviourPun
             healthText = healthLabel.GetComponent<TextMeshProUGUI>();
             if (nameText != null)
             {
-                nameText.text = "Jugador Local"; // Nombre fijo para pruebas
+                nameText.text = "minion"; // Nombre fijo para pruebas
                 nameText.color = Color.blue; // Cambiar el color para el jugador local
                 Debug.Log("Texto asignado: " + nameText.text);
             }
@@ -95,7 +95,7 @@ public class PlayerNameDisplay : MonoBehaviourPun
             healthText = healthLabel.GetComponent<TextMeshProUGUI>();
             if (nameText != null)
             {
-                nameText.text = "Otro Jugador"; // Nombre fijo para pruebas
+                nameText.text = "minion2"; // Nombre fijo para pruebas
                 Debug.Log("Texto asignado: " + nameText.text);
             }
             else
@@ -128,8 +128,8 @@ public class PlayerNameDisplay : MonoBehaviourPun
         {
             // Actualizar la posición del nombre de usuario en la pantalla
             Vector3 screenPosition = Camera.main.WorldToScreenPoint(transform.position + Vector3.up * 2f); // Ajusta la altura del texto
-            nameLabel.transform.position = screenPosition;
-            healthLabel.transform.position = screenPosition + new Vector3(0, -20, 0); // Ajusta la posición de la vida
+            nameLabel.transform.position = screenPosition + new Vector3(0, -20, 0);
+            healthLabel.transform.position = screenPosition + new Vector3(0, -40, 0); // Ajusta la posición de la vida
             //Debug.Log("Posición del nombre y vida actualizada: " + screenPosition);
         }
     }

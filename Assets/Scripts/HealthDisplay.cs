@@ -9,8 +9,8 @@ public class HealthDisplay : MonoBehaviour
     public TextMeshProUGUI healthText;
 
     [Header("Display Settings")]
-    [SerializeField] private Color fullHealthColor = Color.green;
-    [SerializeField] private Color lowHealthColor = Color.red;
+    [SerializeField] private Color fullHealthColor = Color.magenta;
+    [SerializeField] private Color lowHealthColor = Color.blue;
     [SerializeField] private float lowHealthThreshold = 30f;
 
     void Start()
