@@ -27,6 +27,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Unido a una sala.");
         // Instanciar al jugador en la escena
-        PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        PhotonNetwork.Instantiate("Player", Vector3.up, Quaternion.identity);
     }
 }
