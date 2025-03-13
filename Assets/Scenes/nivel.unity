@@ -313,7 +313,7 @@ MonoBehaviour:
   ceilingPrefab: {fileID: 0}
   obstaclePrefabs:
   - {fileID: 688855297561227538, guid: 5dbef50b0c672ee428c21d96d035fabd, type: 3}
-  obstaclePercentage: 20
+  obstaclePercentage: 3
   generateCeiling: 1
 --- !u!4 &231649845
 Transform:
@@ -373,6 +373,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -498,6 +499,22 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &330585548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f87423d9b577ad4ca0311fff4cb0a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  smoothSpeed: 5
+  offset: {x: 0, y: 12, z: 0}
+  isFollowing: 1
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1245,6 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 330585546}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1048130312}
@@ -1237,3 +1253,4 @@ SceneRoots:
   - {fileID: 982017977}
   - {fileID: 231649845}
   - {fileID: 1305450083}
+  - {fileID: 330585546}
