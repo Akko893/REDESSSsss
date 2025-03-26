@@ -164,22 +164,9 @@ public class EnemyShooter : MonoBehaviourPun
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!photonView.IsMine) return;
-
         if (other.CompareTag("Bullet"))
         {
-            // Llamar al RPC de daño
-            photonView.RPC("TakeDamage", RpcTarget.All, 10f);
-
-            // Destruir la bala
-            if (other.gameObject.GetComponent<PhotonView>())
-            {
-                PhotonNetwork.Destroy(other.gameObject);
-            }
-            else
-            {
-                Destroy(other.gameObject);
-            }
+            Destroy(gameObject);
         }
     }
 

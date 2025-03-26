@@ -302,8 +302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d08c76607ea3a84faf05bc8fef70c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 25
-  length: 25
+  width: 100
+  length: 100
   maxHeight: 3
   roomSize: 1
   floorPrefab: {fileID: 7267231100812208166, guid: 34d78d5339f08aa4b87566681c15580c,
@@ -316,11 +316,11 @@ MonoBehaviour:
   - {fileID: 688855297561227538, guid: 5dbef50b0c672ee428c21d96d035fabd, type: 3}
   obstaclePercentage: 3
   generateCeiling: 0
-  itemSpawnPercentage: 10
+  itemSpawnPercentage: 1
   itemPrefabs:
-  - {fileID: 1001860757310096340, guid: 8e8f5dcc3a5173d43bfff1c7bf99fb21, type: 3}
-  minItemSpacing: 3
-  enemySpawnPercentage: 3
+  - {fileID: 5618839351900076508, guid: 6d0859285c2b0664ab8d74bbc87e9829, type: 3}
+  minItemSpacing: 7
+  enemySpawnPercentage: 2
   enemyPrefabs:
   - {fileID: 2417140334594004062, guid: 1cc12d95732d5504382dfc2b58eecd02, type: 3}
   minEnemySpacing: 5
@@ -1211,7 +1211,7 @@ Transform:
   m_GameObject: {fileID: 1305450081}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.5, y: 0.96, z: 0}
+  m_LocalPosition: {x: 2.5, y: 0.96, z: 1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
