@@ -72,12 +72,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e964b777d53d014e910a93bb374bb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 1336299925555855304, guid: fbd2036e48664cf4293ce00a3247bf38,
+  projectilePrefab: {fileID: 644219386493018642, guid: 838d97dcce558c4408776a3b7d611c5f,
     type: 3}
   firePoint: {fileID: 154997383465083851}
   fireRate: 1
   detectionRange: 10
   rotationSpeed: 5
+  maxHealth: 100
 --- !u!114 &8584393996692381742
 MonoBehaviour:
   m_ObjectHideFlags: 0
