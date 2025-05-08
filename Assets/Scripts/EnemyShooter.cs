@@ -16,6 +16,9 @@ public class EnemyShooter : MonoBehaviourPun
     private float nextFireTime = 0f;
     private GameObject targetPlayer;
     private float currentHealth;
+    [Header("AudioSources")]
+    [SerializeField] AudioSource damageSFX;
+    [SerializeField] AudioSource shootSFX;
 
     private void Start()
     {
@@ -128,6 +131,7 @@ public class EnemyShooter : MonoBehaviourPun
             {
                 projectileComponent.SetDirection(direction);
                 Debug.Log("Proyectil disparado hacia: " + direction);
+                //shootSFX.Play();
             }
             else
             {
@@ -166,7 +170,8 @@ public class EnemyShooter : MonoBehaviourPun
     {
         if (other.CompareTag("Bullet"))
         {
-            Destroy(gameObject);
+            damageSFX.Play();
+            Destroy(gameObject, 0.75f);
         }
     }
 
@@ -179,6 +184,7 @@ public class EnemyShooter : MonoBehaviourPun
             Debug.Log("Bullet hit enemy!");
             // Llamar al RPC de daño
             photonView.RPC("TakeDamage", RpcTarget.All, 10f);
+            damageSFX.Play();
 
             // Destruir la bala
             if (collision.gameObject.GetComponent<PhotonView>())
